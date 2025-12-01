@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent RAG Platform - Materials Science Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Materials Science RAG Platform</h1>
+            <p class="subtitle">Search, Summarize, and Reason over Research Papers</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="queryInput" 
+                    placeholder="Enter your research query (e.g., 'graphene applications in electronics')"
+                    class="query-input"
+                >
+                <button onclick="search()" class="search-btn" id="searchBtn">
+                    <span id="btnText">Search</span>
+                    <span id="btnSpinner" class="spinner hidden"></span>
+                </button>
+            </div>
+
+            <div class="options">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="enableSummarization" checked>
+                    <span>Enable Summarization (AI)</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="enableReasoning" checked>
+                    <span>Enable Reasoning (AI)</span>
+                </label>
+                <div class="source-select">
+                    <label>Sources:</label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="sourceArxiv" checked>
+                        <span>arXiv</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="sourcePubchem">
+                        <span>PubChem</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="result-section">
+                <h2>📚 Retrieved Documents</h2>
+                <div id="documentsList" class="documents-list"></div>
+            </div>
+
+            <div id="summarizationSection" class="result-section hidden">
+                <h2>📝 Summarization</h2>
+                <div id="summarizationContent"></div>
+            </div>
+
+            <div id="reasoningSection" class="result-section hidden">
+                <h2>🧠 Reasoning</h2>
+                <div id="reasoningContent"></div>
+            </div>
+
+            <div id="storageSection" class="result-section hidden">
+                <h2>💾 Storage</h2>
+                <div id="storageContent"></div>
+            </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner-large"></div>
+            <p>Processing your query...</p>
+            <p class="loading-steps" id="loadingSteps"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Powered by Anthropic Claude & Google Cloud Platform</p>
+        <p>API Endpoint: <code id="apiEndpoint"></code></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

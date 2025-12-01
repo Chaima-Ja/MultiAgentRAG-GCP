@@ -40,12 +40,10 @@ The platform implements a **modular agent architecture** where each agent has a 
 - **Scalability**: Agents can scale independently based on workload
 - **Testability**: Each agent can be tested in isolation
 
-See `agents/agent_example.py` for the architecture pattern implementation.
 
 ### Google Cloud Platform Integration
 
-
-#### **Cloud Functions (Gen2)**
+#### **Cloud Functions**
 - Serverless API endpoints
 - Auto-scaling based on demand
 - Pay-per-use cost model
@@ -69,12 +67,10 @@ See `agents/agent_example.py` for the architecture pattern implementation.
 - Auto-scaling web services
 - Integrated load balancing
 
-See `gcp_integration/` for integration patterns and examples.
 
 
 
 ## Technology Stack
-
 - **Python 3.11**
 - **LangChain**
 - **Google Cloud SDK**
@@ -86,26 +82,9 @@ See `gcp_integration/` for integration patterns and examples.
 - **Flask**
 - **Responsive Design**
 
-## 📁 Project Structure
-
-```
-├── agents/                  # Agent architecture examples
-│   ├── agent_example.py    # Simplified agent pattern
-│   └── README.md           # Architecture explanation
-├── gcp_integration/        # GCP service integration patterns
-│   ├── storage_example.py  # Cloud Storage client
-│   ├── bigquery_example.py # BigQuery logging
-│   └── README.md           # Integration patterns
-├── ui/                      # Web interface (demo)
-│   ├── app.py              # Flask server
-│   ├── static/             # Frontend files
-│   └── Dockerfile          # Container definition
-└── README.md               # This file
-```
 
 
 ## Architecture Flow
-
 ```
 User Query
     ↓
@@ -119,56 +98,14 @@ Agent Orchestrator
 │  Reasoning Agent                │ 
 └─────────────────────────────────┘
     ↓
-Cloud Storage (Persistence)
+Cloud Storage 
     ↓
-BigQuery (Analytics)
+BigQuery
     ↓
 Response to User
 ```
 
 
-
-## 🔍 Code Examples
-
-### Agent Pattern
-See `agents/agent_example.py` for a simplified implementation of the agent architecture pattern.
-
-### GCP Integration
-See `gcp_integration/` for examples of:
-- Cloud Storage client implementation
-- BigQuery logging patterns
-- Service integration best practices
-
-## 📈 Performance Considerations
-
-- **Caching**: Reduces API calls and costs
-- **Batch Processing**: Efficient LLM usage
-- **Async Operations**: Parallel agent execution
-- **Error Recovery**: Retry logic and fallbacks
-
-## 🎓 Learning Outcomes
-
-This project demonstrates:
-- Advanced system architecture design
-- Cloud-native application development
-- Multi-agent system orchestration
-- Production-ready code patterns
-- GCP service integration expertise
-
-## 📝 Notes
-
-This is a portfolio demonstration showcasing:
-- **Multi-agent system design** capabilities
-- **GCP cloud engineering** expertise
-- **LLM integration** skills
-- **Production-ready** architecture patterns
-
-The full implementation includes additional features, optimizations, and production considerations not shown in this public version.
-
-## 📧 Contact
+## Contact
 
 For questions about the architecture or collaboration opportunities, please reach out.
-
----
-
-*Built with Python, LangChain, Anthropic Claude, and Google Cloud Platform*

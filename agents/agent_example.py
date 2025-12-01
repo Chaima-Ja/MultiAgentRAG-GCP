@@ -1,6 +1,5 @@
 """
 Simplified example of the agent architecture pattern.
-This demonstrates the design without revealing the full implementation.
 """
 
 from typing import Dict, List
@@ -67,7 +66,7 @@ class SummarizationAgent(BaseAgent):
             List of documents with added summaries
         """
         # Simplified example - full implementation includes:
-        # - LLM client initialization (Anthropic Claude or Vertex AI)
+        # - LLM client initialization
         # - Batch processing
         # - Error handling
         # - Executive summary generation
